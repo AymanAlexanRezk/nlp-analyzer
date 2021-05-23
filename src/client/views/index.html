@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sentiment Analyzer | May 2021</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="">Logo</div>
+      <div class="">navigation</div>
+    </header>
+    <main>
+      <section>
+        <form class="" onsubmit="return Client.handleSubmit(event)">
+          <input
+            id="name"
+            type="text"
+            name="input"
+            value=""
+            placeholder="Name"
+          />
+          <input
+            type="submit"
+            name=""
+            value="submit"
+            onclick="return Client.handleSubmit(event)"
+            onsubmit="return Client.handleSubmit(event)"
+          />
+        </form>
+      </section>
+
+      <section>
+        <section id="resultSection" class="hidden">
+          <strong>Form Results:</strong>
+          <div>score tag :</div>>
+          <div id="score_tag"></div>
+          <div>Agreement :</div>>
+          <div id="agreement"></div>
+          <div>Subjectivity :</div>>
+          <div id="subjectivity"></div>
+          <div>Confidence :</div>>
+          <div id="confidence"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>This is a footer</p>
+    </footer>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service-worker.js");
+        });
+      }
+    </script>
+  </body>
+</html>
