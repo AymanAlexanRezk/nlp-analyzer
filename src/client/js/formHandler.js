@@ -1,14 +1,14 @@
 function handleSubmit(event) {
   event.preventDefault();
-  let inputText = document.getElementById("name").value;
-  if (Client.checkForName(inputText)) {
+  let url = document.getElementById("name").value;
+  if (Client.checkForName(url)) {
     fetch("http://localhost:8081/test", {
       method: "POST",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ url: inputText }),
+      body: JSON.stringify({ url }),
     })
       .then((res) => res.json())
       .then(function (res) {
