@@ -9,20 +9,22 @@
     <header>
       <div class="">Logo</div>
       <div class="">navigation</div>
+      <h1>Sentiment Analyzer</h1>
     </header>
     <main>
       <section>
+        <h2>Analyzer Form</h2>
         <form class="" onsubmit="return Client.handleSubmit(event)">
           <input
             id="name"
-            type="text"
+            type="url"
             name="input"
             value=""
-            placeholder="Name"
+            placeholder="Test you API URL"
           />
           <input
             type="submit"
-            name=""
+            name="submit"
             value="submit"
             onclick="return Client.handleSubmit(event)"
             onsubmit="return Client.handleSubmit(event)"
@@ -30,8 +32,8 @@
         </form>
       </section>
 
-      <section>
-        <section id="resultSection" class="hidden">
+       <section id="resultSection" class="hidden">
+         <h2>Results</h2>
           <strong>Form Results:</strong>
           <div>score tag :</div>>
           <div id="score_tag"></div>
